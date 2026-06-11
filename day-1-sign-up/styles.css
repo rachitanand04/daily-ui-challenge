@@ -1,0 +1,146 @@
+:root {
+  --black-0: hsl(0, 0%, 0%);
+  --black-5: hsl(0, 0%, 5%);
+  --black-10: hsl(0, 0%, 10%);
+  --black-20: hsl(0, 0%, 20%);
+  --text-main: hsl(0, 0%, 70%);
+}
+
+body {
+  background-color: var(--black-0);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 60%;
+  height: 80vh;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px var(--black-20) solid;
+  box-shadow: 1px -1px 2px var(--black-20);
+  max-height: 70vh;
+}
+
+.grid-item {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: var(--black-10);
+}
+
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.form-container {
+  width: 80%;
+  margin: 1rem;
+}
+
+.form-container h2 {
+  font-family: sans-serif;
+  color: var(--text-main);
+  width: fit-content;
+  position: relative;
+}
+
+.form-container h2::before {
+  content: "";
+  position: absolute;
+  height: 5px;
+  width: 100%;
+  background: linear-gradient(
+    to bottom left,
+    hsl(60, 80%, 70%),
+    hsl(150, 80%, 70%),
+    hsl(240, 80%, 77%)
+  );
+  border-radius: 10px;
+  top: 100%;
+}
+
+.grid-item.form {
+  display: flex;
+  align-items: center;
+}
+
+form {
+  display: grid;
+}
+
+input {
+  background-color: var(--black-20);
+  border: none;
+  outline: none;
+  height: 2rem;
+  color: white;
+  border-radius: 10px;
+  padding: 0 5px 0 5px;
+}
+
+label {
+  font-family: sans-serif;
+  color: var(--text-main);
+  margin-top: 1rem;
+}
+
+button {
+  border: none;
+  margin-top: 1rem;
+  width: 6rem;
+  border-radius: 16px;
+  padding: 10px 20px;
+  text-align: center;
+  background: linear-gradient(
+    to bottom left,
+    hsl(60, 80%, 70%),
+    hsl(150, 80%, 70%),
+    hsl(240, 80%, 77%)
+  );
+  position: relative;
+  z-index: 1;
+  color: var(--text-main);
+  cursor: pointer;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  bottom: 1px;
+  left: 1px;
+  right: 1px;
+  border-radius: 16px;
+  background-color: var(--black-10);
+  z-index: -1;
+  transition: ease 0.1s;
+}
+
+button:hover::before {
+  background-color: var(--black-20);
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    width: 90%;
+    height: auto;
+    max-height: 100vh;
+  }
+
+  .grid-item {
+    min-height: 40vh;
+  }
+
+  .grid-item img{
+    max-height: 40vh;
+  }
+}
