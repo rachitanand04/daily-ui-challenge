@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="payment-container">
+      <div class="grid-item list">
+        <div>
+          <p>Order Summary</p>
+          <hr />
+        </div>
+        <div class="item-container">
+          <div class="order-item">
+            <p>Shoes</p>
+            <p>$100/-</p>
+          </div>
+          <div class="order-item">
+            <p>Phone</p>
+            <p>$100/-</p>
+          </div>
+        </div>
+        <hr />
+        <div class="payment-summary">
+          <p>Shipping</p>
+          <p>$10/-</p>
+          <p>Tax(10%)</p>
+          <p>$20/-</p>
+          <p>Total</p>
+          <p>$230/-</p>
+        </div>
+      </div>
+      <div class="grid-item credit-card">
+        <h2>Payment Details</h2>
+        <div class="card-choice">
+          <button><img src="images/mastercard.svg" /></button>
+          <button><img src="images/visa.svg" /></button>
+          <button><img src="images/amex.svg" /></button>
+        </div>
+        <form>
+          <label>Name on Card</label>
+          <input placeholder="Name" />
+          <label>Card Number</label>
+          <input placeholder="XXXX XXXX XXXX XXXX" />
+          <div class="card-deets-2">
+            <label>Expiry Date</label>
+            <input placeholder="-/-" />
+            <label>CVV</label>
+            <input placeholder="XXX" />
+          </div>
+        </form>
+        <button class="make-payment">Make Payment</button>
+      </div>
+    </div>
+  </body>
+</html>

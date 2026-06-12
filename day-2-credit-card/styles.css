@@ -1,0 +1,162 @@
+:root {
+  --bg: hsl(208, 38%, 64%);
+  --accent: hsl(210, 36%, 63%);
+  --bg-secondary-1: hsl(20, 17%, 86%);
+  --bg-secondary-2: hsl(0, 29%, 95%);
+  --shadow: hsl(0, 0%, 50%);
+  --font-style: "Mulish"
+}
+
+body {
+  background-color: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.payment-container {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  height: 30rem;
+  width: 40rem;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: -2px 2px 5px var(--shadow);
+}
+
+.grid-item.list {
+  background-color: var(--bg-secondary-1);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.item-container {
+  max-height: 100%;
+  overflow: hidden;
+}
+
+.order-item {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* .grid-item.credit-card{
+    background-color: var(--bg-secondary-2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} */
+
+.grid-item.credit-card {
+  background-color: var(--bg-secondary-2);
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  justify-items: center;
+  height: 100%;
+}
+
+p {
+  text-align: center;
+  font-family: var(--font-style);
+}
+
+hr {
+  height: 1px;
+  color: var(--accent);
+  background-color: var(--accent);
+  border: 0;
+  margin: 0 1rem;
+}
+
+h2 {
+  text-align: center;
+  font-family: var(--font-style);
+  color: var(--accent);
+}
+
+.card-choice {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.card-choice button {
+  width: 70px;
+  height: 40px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: 1px var(--accent) solid;
+  border-radius: 5px;
+}
+
+.card-choice button:hover {
+  background-color: var(--bg-secondary-1);
+}
+
+.card-choice button img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.card-deets-2 {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+form {
+  display: grid;
+  margin: 20px;
+}
+
+input {
+  background-color: var(--bg-secondary-1);
+  border: none;
+  outline: none;
+  height: 3rem;
+  padding: 0 1rem;
+  border-radius: 5px;
+}
+
+.card-deets-2 input {
+  width: 5rem;
+}
+
+label {
+  font-family: var(--font-style);
+  margin: 0;
+}
+
+.make-payment:hover {
+  background-color: var(--bg);
+}
+.make-payment {
+  width: 80%;
+  height: 3rem;
+  font-size: 1rem;
+  font-family: var(--font-style);
+  background-color: var(--accent);
+  color: var(--bg-secondary-2);
+  border-radius: 16px;
+  border: none;
+  box-shadow: -2px 2px 5px var(--shadow);
+
+  margin-bottom: 1rem;
+  justify-self: center;
+}
+
+.payment-summary {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+}
+
+.payment-summary p{
+    margin: 2px;
+}
